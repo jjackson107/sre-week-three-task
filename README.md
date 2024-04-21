@@ -1,0 +1,5 @@
+# Ticketing System Improvements
+1. Deploy Prometheus and confgigure AlertManager so an SRE can have more visibility into the service and what may be causing issues
+2. Configure different alert levels. Ideally, none of these alerts would be sent to the on-call, but instead only a single one which contains all the relevant info without 15 separate pings. For example: '[CRITICAL] error:"EndpointRegistrationTransientFailure" detected in [x number] of zones. Immediate action is required, see more logs at [this link].`
+3. Set up a clearly-defined on-call tree in each zone. For example, an SRE in zone XQ will only see items related to their own zone, but could collaborate with SREs in other areas for the wider remediation effort.
+4. Dedicate time in the schedules of some engineers for engineering work so they can review historical alerting data and clear out any deprecated or irrelevant notifiers. This is a management effort, not only the SREs themselves.
